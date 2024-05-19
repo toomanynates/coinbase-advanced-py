@@ -1,5 +1,6 @@
 import logging
 import os
+from multiprocessing import AuthenticationError
 from typing import IO, Any, Dict, Optional, Union
 
 import requests
@@ -78,12 +79,15 @@ class RESTBase(APIBase):
             timeout=timeout,
             verbose=verbose,
         )
+        self.session = requests.Session()
         if verbose:
             logger.setLevel(logging.DEBUG)
 
-    def get(self, url_path, params: Optional[dict] = None, **kwargs) -> Dict[str, Any]:
+    def get(
+        self, url_path, params: Optional[dict] = None, public=False, **kwargs
+    ) -> Dict[str, Any]:
         """
-        **Authenticated GET Request**
+        **GET Request**
         _____________________________
 
         __________
@@ -92,6 +96,7 @@ class RESTBase(APIBase):
 
         - **url_path | (str)** - the URL path
         - **params | Optional ([dict])** - the query parameters
+        - **public | (bool)** - flag indicating whether to treat endpoint as public
 
 
         """
@@ -101,7 +106,9 @@ class RESTBase(APIBase):
         if kwargs:
             params.update(kwargs)
 
-        return self.prepare_and_send_request("GET", url_path, params, data=None)
+        return self.prepare_and_send_request(
+            "GET", url_path, params, data=None, public=public
+        )
 
     def post(
         self,
@@ -187,11 +194,17 @@ class RESTBase(APIBase):
         url_path,
         params: Optional[dict] = None,
         data: Optional[dict] = None,
+        public=False,
     ):
         """
         :meta private:
         """
-        headers = self.set_headers(http_method, url_path)
+        if not self.is_authenticated and not public:
+            raise AuthenticationError(
+                "Unauthenticated request to private endpoint. If you wish to access private endpoints, you must provide your API key and secret when initializing the RESTClient."
+            )
+
+        headers = self.set_headers(http_method, url_path, public)
 
         if params is not None:
             params = {key: value for key, value in params.items() if value is not None}
@@ -212,7 +225,7 @@ class RESTBase(APIBase):
 
         logger.debug(f"Sending {http_method} request to {url}")
 
-        response = requests.request(
+        response = self.session.request(
             http_method,
             url,
             params=params,
@@ -226,14 +239,20 @@ class RESTBase(APIBase):
 
         return response.json()
 
-    def set_headers(self, method, path):
+    def set_headers(self, method, path, public):
         """
         :meta private:
         """
         uri = f"{method} {self.base_url}{path}"
-        jwt = jwt_generator.build_rest_jwt(uri, self.api_key, self.api_secret)
+
         return {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {jwt}",
             "User-Agent": USER_AGENT,
+            "Content-Type": "application/json",
+            **(
+                {
+                    "Authorization": f"Bearer {jwt_generator.build_rest_jwt(uri, self.api_key, self.api_secret)}",
+                }
+                if self.is_authenticated
+                else {}
+            ),
         }

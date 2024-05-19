@@ -1,5 +1,46 @@
 # Changelog
 
+## [1.3.0] - 2024-MAY-6
+
+### Added
+- Support for limit Fill-or-Kill (FOK) order types
+- Support for trigger bracket orders
+- Support for public endpoints in RESTClient and public channels in WSClient that do not require authentication
+- `retail_portfolio_id` to `get_accounts` method
+
+### Changed
+- "Coinbase Cloud" now referred to as "Coinbase Developer Platform (CDP)"
+
+## [1.2.2] - 2024-APR-9
+
+### Added
+- Support for ClosePosition endpoint
+
+### Changed
+- Audience no longer included in JWT generation
+
+## [1.2.1] - 2024-MAR-27
+
+### Added
+- `retail_portfolio_id` to all `preview_order` methods
+
+### Changed
+- Requests now made via request.Sessions() to reduce latency by reusing existing HTTP connection
+- Timestamp no longer needed for websocket signing
+
+## [1.2.0] - 2024-MAR-11
+
+### Added
+- Support for limit IOC order types
+- Support for payments endpoints
+
+### Changed
+- get_unix_time() no longer requires authentication
+- Log message when subscribing or unsubscribing via WSClient
+
+### Fixed
+- Unsubscribe_all() no longer sends message if not subscribed to any channel
+
 ## [1.1.3] - 2024-FEB-13
 
 ### Added

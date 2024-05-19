@@ -1,0 +1,373 @@
+2024-02-20 00:50:27,001: root: INFO: MLTrader : Executing the initialize lifecycle method
+2024-02-20 00:50:28,907: root: INFO: Current backtesting datetime 2023-12-15 08:30:00-05:00
+2024-02-20 00:50:28,908: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:28,910: root: INFO: Current backtesting datetime 2023-12-15 09:30:00-05:00
+2024-02-20 00:50:28,910: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:28,911: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 00:50:28[0m
+2024-02-20 00:50:28,912: root: ERROR: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+2024-02-20 00:50:28,915: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 48, in on_trading_iteration
+    cash, last_price, quantity = self.position_sizing()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+
+2024-02-20 00:50:28,919: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 00:50:28,922: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 00:50:28,923: root: INFO: Current backtesting datetime 2023-12-16 09:30:00-05:00
+2024-02-20 00:50:28,926: root: INFO: Current backtesting datetime 2023-12-18 08:30:00-05:00
+2024-02-20 00:50:28,927: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:28,929: root: INFO: Current backtesting datetime 2023-12-18 09:30:00-05:00
+2024-02-20 00:50:28,929: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:28,931: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 00:50:28[0m
+2024-02-20 00:50:28,932: root: ERROR: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+2024-02-20 00:50:28,934: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 48, in on_trading_iteration
+    cash, last_price, quantity = self.position_sizing()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+
+2024-02-20 00:50:28,941: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 00:50:28,943: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 00:50:28,944: root: INFO: Current backtesting datetime 2023-12-19 09:30:00-05:00
+2024-02-20 00:50:28,946: root: INFO: Current backtesting datetime 2023-12-19 08:30:00-05:00
+2024-02-20 00:50:28,946: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:28,949: root: INFO: Current backtesting datetime 2023-12-19 09:30:00-05:00
+2024-02-20 00:50:28,949: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:28,951: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 00:50:28[0m
+2024-02-20 00:50:28,952: root: ERROR: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+2024-02-20 00:50:28,954: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 48, in on_trading_iteration
+    cash, last_price, quantity = self.position_sizing()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+
+2024-02-20 00:50:28,960: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 00:50:28,961: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 00:50:28,962: root: INFO: Current backtesting datetime 2023-12-20 09:30:00-05:00
+2024-02-20 00:50:28,963: root: INFO: Current backtesting datetime 2023-12-20 08:30:00-05:00
+2024-02-20 00:50:28,963: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:28,966: root: INFO: Current backtesting datetime 2023-12-20 09:30:00-05:00
+2024-02-20 00:50:28,967: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:28,969: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 00:50:28[0m
+2024-02-20 00:50:28,969: root: ERROR: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+2024-02-20 00:50:28,971: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 48, in on_trading_iteration
+    cash, last_price, quantity = self.position_sizing()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+
+2024-02-20 00:50:28,976: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 00:50:28,978: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 00:50:28,979: root: INFO: Current backtesting datetime 2023-12-21 09:30:00-05:00
+2024-02-20 00:50:28,981: root: INFO: Current backtesting datetime 2023-12-21 08:30:00-05:00
+2024-02-20 00:50:28,983: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:28,986: root: INFO: Current backtesting datetime 2023-12-21 09:30:00-05:00
+2024-02-20 00:50:28,986: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:28,989: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 00:50:28[0m
+2024-02-20 00:50:28,990: root: ERROR: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+2024-02-20 00:50:28,992: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 48, in on_trading_iteration
+    cash, last_price, quantity = self.position_sizing()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+
+2024-02-20 00:50:28,999: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 00:50:29,003: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 00:50:29,003: root: INFO: Current backtesting datetime 2023-12-22 09:30:00-05:00
+2024-02-20 00:50:29,006: root: INFO: Current backtesting datetime 2023-12-22 08:30:00-05:00
+2024-02-20 00:50:29,007: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:29,008: root: INFO: Current backtesting datetime 2023-12-22 09:30:00-05:00
+2024-02-20 00:50:29,008: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:29,010: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 00:50:29[0m
+2024-02-20 00:50:29,010: root: ERROR: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+2024-02-20 00:50:29,012: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 48, in on_trading_iteration
+    cash, last_price, quantity = self.position_sizing()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+
+2024-02-20 00:50:29,018: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 00:50:29,020: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 00:50:29,020: root: INFO: Current backtesting datetime 2023-12-23 09:30:00-05:00
+2024-02-20 00:50:29,021: root: INFO: Current backtesting datetime 2023-12-26 08:30:00-05:00
+2024-02-20 00:50:29,022: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:29,024: root: INFO: Current backtesting datetime 2023-12-26 09:30:00-05:00
+2024-02-20 00:50:29,024: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:29,025: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 00:50:29[0m
+2024-02-20 00:50:29,025: root: ERROR: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+2024-02-20 00:50:29,027: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 48, in on_trading_iteration
+    cash, last_price, quantity = self.position_sizing()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+
+2024-02-20 00:50:29,033: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 00:50:29,035: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 00:50:29,035: root: INFO: Current backtesting datetime 2023-12-27 09:30:00-05:00
+2024-02-20 00:50:29,036: root: INFO: Current backtesting datetime 2023-12-27 08:30:00-05:00
+2024-02-20 00:50:29,037: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:29,039: root: INFO: Current backtesting datetime 2023-12-27 09:30:00-05:00
+2024-02-20 00:50:29,039: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:29,040: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 00:50:29[0m
+2024-02-20 00:50:29,040: root: ERROR: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+2024-02-20 00:50:29,042: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 48, in on_trading_iteration
+    cash, last_price, quantity = self.position_sizing()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+
+2024-02-20 00:50:29,048: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 00:50:29,051: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 00:50:29,052: root: INFO: Current backtesting datetime 2023-12-28 09:30:00-05:00
+2024-02-20 00:50:29,054: root: INFO: Current backtesting datetime 2023-12-28 08:30:00-05:00
+2024-02-20 00:50:29,055: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:29,056: root: INFO: Current backtesting datetime 2023-12-28 09:30:00-05:00
+2024-02-20 00:50:29,056: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:29,058: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 00:50:29[0m
+2024-02-20 00:50:29,058: root: ERROR: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+2024-02-20 00:50:29,061: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 48, in on_trading_iteration
+    cash, last_price, quantity = self.position_sizing()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+
+2024-02-20 00:50:29,067: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 00:50:29,069: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 00:50:29,069: root: INFO: Current backtesting datetime 2023-12-29 09:30:00-05:00
+2024-02-20 00:50:29,071: root: INFO: Current backtesting datetime 2023-12-29 08:30:00-05:00
+2024-02-20 00:50:29,071: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:29,073: root: INFO: Current backtesting datetime 2023-12-29 09:30:00-05:00
+2024-02-20 00:50:29,073: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:29,074: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 00:50:29[0m
+2024-02-20 00:50:29,074: root: ERROR: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+2024-02-20 00:50:29,076: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 48, in on_trading_iteration
+    cash, last_price, quantity = self.position_sizing()
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MLTrader.position_sizing() takes 0 positional arguments but 1 was given
+
+2024-02-20 00:50:29,082: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 00:50:29,084: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 00:50:29,085: root: INFO: Current backtesting datetime 2023-12-30 09:30:00-05:00
+2024-02-20 00:50:29,086: root: INFO: Current backtesting datetime 2024-01-02 08:30:00-05:00
+2024-02-20 00:50:29,087: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 00:50:29,088: root: INFO: Current backtesting datetime 2024-01-02 09:30:00-05:00
+2024-02-20 00:50:29,089: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 00:50:29,091: root: INFO: Current backtesting datetime 2024-01-02 15:55:00-05:00
+2024-02-20 00:50:29,091: root: INFO: MLTrader : Executing the before_market_closes lifecycle method
+2024-02-20 00:50:29,093: root: INFO: Current backtesting datetime 2024-01-02 16:00:00-05:00
+2024-02-20 00:50:29,093: root: INFO: MLTrader : Executing the after_market_closes lifecycle method
+2024-02-20 00:50:29,093: root: INFO: MLTrader : Executing the on_strategy_end lifecycle method
+2024-02-20 00:50:29,093: backtest_stats: INFO: Backtest took 0:00:02.116307 for a speed of 0.000
+2024-02-20 00:50:29,093: root: WARNING: Cannot plot returns because the strategy returns are missing
+2024-02-20 00:50:29,289: root: WARNING: Cannot create a tearsheet because the strategy returns are missing

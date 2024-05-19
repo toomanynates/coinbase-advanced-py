@@ -1,0 +1,603 @@
+2024-02-20 01:13:35,668: root: INFO: MLTrader : Executing the initialize lifecycle method
+2024-02-20 01:13:37,698: root: INFO: Current backtesting datetime 2023-12-15 08:30:00-05:00
+2024-02-20 01:13:37,700: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:37,702: root: INFO: Current backtesting datetime 2023-12-15 09:30:00-05:00
+2024-02-20 01:13:37,702: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:37,704: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 01:13:37[0m
+2024-02-20 01:13:37,705: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:37,722: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,052: root: ERROR: 'bracket' is not a valid price. limit_price must be positive float.
+2024-02-20 01:13:39,089: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 14, in check_numeric
+    input = type(input)
+            ^^^^^^^^^^^
+ValueError: could not convert string to float: 'bracket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 54, in on_trading_iteration
+    order = self.create_order(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy.py", line 597, in create_order
+    order = Order(
+            ^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 253, in __init__
+    self._set_type(limit_price, stop_price, take_profit_price, stop_loss_price, stop_loss_limit_price, trail_price, trail_percent, position_filled)
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 404, in _set_type
+    self.limit_price = check_price(
+                       ^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 73, in check_price
+    result = check_numeric(price, float, error_message, strict=True, nullable=nullable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 16, in check_numeric
+    raise error
+ValueError: 'bracket' is not a valid price. limit_price must be positive float.
+
+2024-02-20 01:13:39,099: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 01:13:39,104: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 01:13:39,104: root: INFO: Current backtesting datetime 2023-12-16 09:30:00-05:00
+2024-02-20 01:13:39,106: root: INFO: Current backtesting datetime 2023-12-18 08:30:00-05:00
+2024-02-20 01:13:39,107: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:39,113: root: INFO: Current backtesting datetime 2023-12-18 09:30:00-05:00
+2024-02-20 01:13:39,113: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:39,115: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 01:13:39[0m
+2024-02-20 01:13:39,116: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,120: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,205: root: ERROR: 'bracket' is not a valid price. limit_price must be positive float.
+2024-02-20 01:13:39,209: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 14, in check_numeric
+    input = type(input)
+            ^^^^^^^^^^^
+ValueError: could not convert string to float: 'bracket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 54, in on_trading_iteration
+    order = self.create_order(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy.py", line 597, in create_order
+    order = Order(
+            ^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 253, in __init__
+    self._set_type(limit_price, stop_price, take_profit_price, stop_loss_price, stop_loss_limit_price, trail_price, trail_percent, position_filled)
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 404, in _set_type
+    self.limit_price = check_price(
+                       ^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 73, in check_price
+    result = check_numeric(price, float, error_message, strict=True, nullable=nullable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 16, in check_numeric
+    raise error
+ValueError: 'bracket' is not a valid price. limit_price must be positive float.
+
+2024-02-20 01:13:39,218: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 01:13:39,220: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 01:13:39,220: root: INFO: Current backtesting datetime 2023-12-19 09:30:00-05:00
+2024-02-20 01:13:39,222: root: INFO: Current backtesting datetime 2023-12-19 08:30:00-05:00
+2024-02-20 01:13:39,222: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:39,224: root: INFO: Current backtesting datetime 2023-12-19 09:30:00-05:00
+2024-02-20 01:13:39,224: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:39,225: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 01:13:39[0m
+2024-02-20 01:13:39,226: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,227: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,318: root: ERROR: 'bracket' is not a valid price. limit_price must be positive float.
+2024-02-20 01:13:39,319: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 14, in check_numeric
+    input = type(input)
+            ^^^^^^^^^^^
+ValueError: could not convert string to float: 'bracket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 54, in on_trading_iteration
+    order = self.create_order(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy.py", line 597, in create_order
+    order = Order(
+            ^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 253, in __init__
+    self._set_type(limit_price, stop_price, take_profit_price, stop_loss_price, stop_loss_limit_price, trail_price, trail_percent, position_filled)
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 404, in _set_type
+    self.limit_price = check_price(
+                       ^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 73, in check_price
+    result = check_numeric(price, float, error_message, strict=True, nullable=nullable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 16, in check_numeric
+    raise error
+ValueError: 'bracket' is not a valid price. limit_price must be positive float.
+
+2024-02-20 01:13:39,328: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 01:13:39,331: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 01:13:39,331: root: INFO: Current backtesting datetime 2023-12-20 09:30:00-05:00
+2024-02-20 01:13:39,333: root: INFO: Current backtesting datetime 2023-12-20 08:30:00-05:00
+2024-02-20 01:13:39,335: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:39,337: root: INFO: Current backtesting datetime 2023-12-20 09:30:00-05:00
+2024-02-20 01:13:39,337: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:39,340: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 01:13:39[0m
+2024-02-20 01:13:39,340: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,342: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,433: root: ERROR: 'bracket' is not a valid price. limit_price must be positive float.
+2024-02-20 01:13:39,437: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 14, in check_numeric
+    input = type(input)
+            ^^^^^^^^^^^
+ValueError: could not convert string to float: 'bracket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 54, in on_trading_iteration
+    order = self.create_order(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy.py", line 597, in create_order
+    order = Order(
+            ^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 253, in __init__
+    self._set_type(limit_price, stop_price, take_profit_price, stop_loss_price, stop_loss_limit_price, trail_price, trail_percent, position_filled)
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 404, in _set_type
+    self.limit_price = check_price(
+                       ^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 73, in check_price
+    result = check_numeric(price, float, error_message, strict=True, nullable=nullable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 16, in check_numeric
+    raise error
+ValueError: 'bracket' is not a valid price. limit_price must be positive float.
+
+2024-02-20 01:13:39,451: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 01:13:39,455: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 01:13:39,455: root: INFO: Current backtesting datetime 2023-12-21 09:30:00-05:00
+2024-02-20 01:13:39,460: root: INFO: Current backtesting datetime 2023-12-21 08:30:00-05:00
+2024-02-20 01:13:39,461: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:39,464: root: INFO: Current backtesting datetime 2023-12-21 09:30:00-05:00
+2024-02-20 01:13:39,464: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:39,465: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 01:13:39[0m
+2024-02-20 01:13:39,466: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,467: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,565: root: ERROR: 'bracket' is not a valid price. limit_price must be positive float.
+2024-02-20 01:13:39,574: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 14, in check_numeric
+    input = type(input)
+            ^^^^^^^^^^^
+ValueError: could not convert string to float: 'bracket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 54, in on_trading_iteration
+    order = self.create_order(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy.py", line 597, in create_order
+    order = Order(
+            ^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 253, in __init__
+    self._set_type(limit_price, stop_price, take_profit_price, stop_loss_price, stop_loss_limit_price, trail_price, trail_percent, position_filled)
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 404, in _set_type
+    self.limit_price = check_price(
+                       ^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 73, in check_price
+    result = check_numeric(price, float, error_message, strict=True, nullable=nullable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 16, in check_numeric
+    raise error
+ValueError: 'bracket' is not a valid price. limit_price must be positive float.
+
+2024-02-20 01:13:39,599: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 01:13:39,602: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 01:13:39,602: root: INFO: Current backtesting datetime 2023-12-22 09:30:00-05:00
+2024-02-20 01:13:39,605: root: INFO: Current backtesting datetime 2023-12-22 08:30:00-05:00
+2024-02-20 01:13:39,607: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:39,610: root: INFO: Current backtesting datetime 2023-12-22 09:30:00-05:00
+2024-02-20 01:13:39,610: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:39,613: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 01:13:39[0m
+2024-02-20 01:13:39,613: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,617: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,709: root: ERROR: 'bracket' is not a valid price. limit_price must be positive float.
+2024-02-20 01:13:39,711: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 14, in check_numeric
+    input = type(input)
+            ^^^^^^^^^^^
+ValueError: could not convert string to float: 'bracket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 54, in on_trading_iteration
+    order = self.create_order(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy.py", line 597, in create_order
+    order = Order(
+            ^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 253, in __init__
+    self._set_type(limit_price, stop_price, take_profit_price, stop_loss_price, stop_loss_limit_price, trail_price, trail_percent, position_filled)
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 404, in _set_type
+    self.limit_price = check_price(
+                       ^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 73, in check_price
+    result = check_numeric(price, float, error_message, strict=True, nullable=nullable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 16, in check_numeric
+    raise error
+ValueError: 'bracket' is not a valid price. limit_price must be positive float.
+
+2024-02-20 01:13:39,720: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 01:13:39,722: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 01:13:39,722: root: INFO: Current backtesting datetime 2023-12-23 09:30:00-05:00
+2024-02-20 01:13:39,724: root: INFO: Current backtesting datetime 2023-12-26 08:30:00-05:00
+2024-02-20 01:13:39,725: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:39,727: root: INFO: Current backtesting datetime 2023-12-26 09:30:00-05:00
+2024-02-20 01:13:39,727: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:39,729: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 01:13:39[0m
+2024-02-20 01:13:39,729: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,732: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,869: root: ERROR: 'bracket' is not a valid price. limit_price must be positive float.
+2024-02-20 01:13:39,876: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 14, in check_numeric
+    input = type(input)
+            ^^^^^^^^^^^
+ValueError: could not convert string to float: 'bracket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 54, in on_trading_iteration
+    order = self.create_order(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy.py", line 597, in create_order
+    order = Order(
+            ^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 253, in __init__
+    self._set_type(limit_price, stop_price, take_profit_price, stop_loss_price, stop_loss_limit_price, trail_price, trail_percent, position_filled)
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 404, in _set_type
+    self.limit_price = check_price(
+                       ^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 73, in check_price
+    result = check_numeric(price, float, error_message, strict=True, nullable=nullable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 16, in check_numeric
+    raise error
+ValueError: 'bracket' is not a valid price. limit_price must be positive float.
+
+2024-02-20 01:13:39,902: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 01:13:39,904: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 01:13:39,905: root: INFO: Current backtesting datetime 2023-12-27 09:30:00-05:00
+2024-02-20 01:13:39,906: root: INFO: Current backtesting datetime 2023-12-27 08:30:00-05:00
+2024-02-20 01:13:39,908: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:39,912: root: INFO: Current backtesting datetime 2023-12-27 09:30:00-05:00
+2024-02-20 01:13:39,912: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:39,914: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 01:13:39[0m
+2024-02-20 01:13:39,915: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:39,916: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:40,007: root: ERROR: 'bracket' is not a valid price. limit_price must be positive float.
+2024-02-20 01:13:40,014: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 14, in check_numeric
+    input = type(input)
+            ^^^^^^^^^^^
+ValueError: could not convert string to float: 'bracket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 54, in on_trading_iteration
+    order = self.create_order(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy.py", line 597, in create_order
+    order = Order(
+            ^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 253, in __init__
+    self._set_type(limit_price, stop_price, take_profit_price, stop_loss_price, stop_loss_limit_price, trail_price, trail_percent, position_filled)
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 404, in _set_type
+    self.limit_price = check_price(
+                       ^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 73, in check_price
+    result = check_numeric(price, float, error_message, strict=True, nullable=nullable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 16, in check_numeric
+    raise error
+ValueError: 'bracket' is not a valid price. limit_price must be positive float.
+
+2024-02-20 01:13:40,033: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 01:13:40,037: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 01:13:40,038: root: INFO: Current backtesting datetime 2023-12-28 09:30:00-05:00
+2024-02-20 01:13:40,041: root: INFO: Current backtesting datetime 2023-12-28 08:30:00-05:00
+2024-02-20 01:13:40,043: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:40,048: root: INFO: Current backtesting datetime 2023-12-28 09:30:00-05:00
+2024-02-20 01:13:40,048: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:40,050: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 01:13:40[0m
+2024-02-20 01:13:40,051: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:40,052: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:40,151: root: ERROR: 'bracket' is not a valid price. limit_price must be positive float.
+2024-02-20 01:13:40,155: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 14, in check_numeric
+    input = type(input)
+            ^^^^^^^^^^^
+ValueError: could not convert string to float: 'bracket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 54, in on_trading_iteration
+    order = self.create_order(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy.py", line 597, in create_order
+    order = Order(
+            ^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 253, in __init__
+    self._set_type(limit_price, stop_price, take_profit_price, stop_loss_price, stop_loss_limit_price, trail_price, trail_percent, position_filled)
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 404, in _set_type
+    self.limit_price = check_price(
+                       ^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 73, in check_price
+    result = check_numeric(price, float, error_message, strict=True, nullable=nullable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 16, in check_numeric
+    raise error
+ValueError: 'bracket' is not a valid price. limit_price must be positive float.
+
+2024-02-20 01:13:40,164: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 01:13:40,168: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 01:13:40,169: root: INFO: Current backtesting datetime 2023-12-29 09:30:00-05:00
+2024-02-20 01:13:40,173: root: INFO: Current backtesting datetime 2023-12-29 08:30:00-05:00
+2024-02-20 01:13:40,174: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:40,177: root: INFO: Current backtesting datetime 2023-12-29 09:30:00-05:00
+2024-02-20 01:13:40,178: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:40,180: root: INFO: [34mMLTrader : Executing the on_trading_iteration lifecycle method at 2024-02-20 01:13:40[0m
+2024-02-20 01:13:40,180: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:40,182: root: WARNING: quote is not implemented for YahooData, but USD was passed as the quote
+2024-02-20 01:13:40,275: root: ERROR: 'bracket' is not a valid price. limit_price must be positive float.
+2024-02-20 01:13:40,277: root: ERROR: Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 14, in check_numeric
+    input = type(input)
+            ^^^^^^^^^^^
+ValueError: could not convert string to float: 'bracket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 808, in run
+    self._run_trading_session()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 759, in _run_trading_session
+    self._on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 283, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 307, in func_output
+    result = func_input(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 86, in func_output
+    return func_input(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy_executor.py", line 377, in _on_trading_iteration
+    on_trading_iteration()
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 62, in func_output
+    frame, result = call_function_get_frame(func_input, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\decorators.py", line 30, in call_function_get_frame
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\OneDrive\Documents\GitHub\coinbase-advanced-py\tradingbot.py", line 54, in on_trading_iteration
+    order = self.create_order(
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\strategies\strategy.py", line 597, in create_order
+    order = Order(
+            ^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 253, in __init__
+    self._set_type(limit_price, stop_price, take_profit_price, stop_loss_price, stop_loss_limit_price, trail_price, trail_percent, position_filled)
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\entities\order.py", line 404, in _set_type
+    self.limit_price = check_price(
+                       ^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 73, in check_price
+    result = check_numeric(price, float, error_message, strict=True, nullable=nullable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tooma\AppData\Local\Programs\Python\Python312\Lib\site-packages\lumibot\tools\types.py", line 16, in check_numeric
+    raise error
+ValueError: 'bracket' is not a valid price. limit_price must be positive float.
+
+2024-02-20 01:13:40,285: root: INFO: MLTrader : Executing the on_bot_crash event method
+2024-02-20 01:13:40,287: root: INFO: MLTrader : [34mSleeping for 86400 seconds[0m
+2024-02-20 01:13:40,288: root: INFO: Current backtesting datetime 2023-12-30 09:30:00-05:00
+2024-02-20 01:13:40,289: root: INFO: Current backtesting datetime 2024-01-02 08:30:00-05:00
+2024-02-20 01:13:40,290: root: INFO: MLTrader : Executing the before_market_opens lifecycle method
+2024-02-20 01:13:40,291: root: INFO: Current backtesting datetime 2024-01-02 09:30:00-05:00
+2024-02-20 01:13:40,292: root: INFO: MLTrader : Executing the before_starting_trading lifecycle method
+2024-02-20 01:13:40,296: root: INFO: Current backtesting datetime 2024-01-02 15:55:00-05:00
+2024-02-20 01:13:40,297: root: INFO: MLTrader : Executing the before_market_closes lifecycle method
+2024-02-20 01:13:40,299: root: INFO: Current backtesting datetime 2024-01-02 16:00:00-05:00
+2024-02-20 01:13:40,300: root: INFO: MLTrader : Executing the after_market_closes lifecycle method
+2024-02-20 01:13:40,300: root: INFO: MLTrader : Executing the on_strategy_end lifecycle method
+2024-02-20 01:13:40,302: backtest_stats: INFO: Backtest took 0:00:04.643439 for a speed of 0.000
+2024-02-20 01:13:40,302: root: WARNING: Cannot plot returns because the strategy returns are missing
+2024-02-20 01:13:40,506: root: WARNING: Cannot create a tearsheet because the strategy returns are missing
